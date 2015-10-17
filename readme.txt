@@ -3,8 +3,8 @@ Contributors: Ghost1227
 Donate link: http://pledgie.com/campaigns/16297
 Tags: registration, register, minecraft
 Requires at least: 3.1
-Tested up to: 3.4.2
-Stable tag: 1.4
+Tested up to: 4.0.0
+Stable tag: 2.0.0
 
 Authenticate new users against the minecraft.net valid user database.
 
@@ -29,6 +29,10 @@ None yet
 1. Demo of the login/register screen
 
 == Changelog ==
+
+= Version 2.0.0 =
+* Complete codebase overhaul
+* Added Multisite support
 
 = Version 1.4 =
 * Deprecated CURL in favor of wp_remote_get()
