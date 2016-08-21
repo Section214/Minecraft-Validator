@@ -26,21 +26,22 @@ function minecraft_validator_verify_account( $username, $result ) {
 		'timeout' => 5,
 	);
 
-	$response = wp_remote_get( 'https://www.minecraft.net/haspaid.jsp?user=' . rawurlencode( $username ), $options );
+	$response = wp_remote_get( 'https://api.mojang.com/users/profiles/minecraft/' . rawurlencode( $username ), $options );
 
 	if( is_wp_error( $response ) ) {
 		$return = 'error';
 	} else {
-		$return = wp_remote_retrieve_body( $response );
+		$return = wp_remote_retrieve_response_code( $response );
 	}
+
 
 	// Bail if on multisite and already have an error
 	if( is_multisite() && $result['errors']->get_error_message( 'user_name' ) ) {
 		return $result;
 	}
 
-	if( $return != 'true' ) {
-		if( $return == 'false' ) {
+	if( $return != 200 ) {
+		if( $return == 204 ) {
 			if( is_multisite() ) {
 				$result['errors']->add( 'user_name', __( 'Minecraft account is invalid.', 'minecraft-validator' ) );
 			} else {
