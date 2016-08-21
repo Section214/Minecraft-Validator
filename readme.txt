@@ -4,7 +4,7 @@ Donate link: http://pledgie.com/campaigns/16297
 Tags: registration, register, minecraft
 Requires at least: 3.1
 Tested up to: 4.0.0
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 
 Authenticate new users against the minecraft.net valid user database.
 
@@ -29,6 +29,8 @@ None yet
 1. Demo of the login/register screen
 
 == Changelog ==
+= Version 2.0.1 =
+* Fix Mojang API
 
 = Version 2.0.0 =
 * Complete codebase overhaul

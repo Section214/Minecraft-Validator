@@ -3,7 +3,7 @@
  * Plugin Name:     Minecraft Validator
  * Plugin URI:      http://wordpress.org/plugins/minecraft-validator
  * Description:     Simple plugin to verify new WordPress accounts against the Minecraft user database.
- * Version:         2.0.0
+ * Version:         2.0.1
  * Author:          Daniel J Griffiths
  * Author URI:      https://section214.com
  * Text Domain:     minecraft-validator
@@ -66,7 +66,7 @@ if( ! class_exists( 'Minecraft_Validator' ) ) {
 		 */
 		public function setup_constants() {
 			// Plugin version
-			define( 'MINECRAFT_VALIDATOR_VER', '2.0.0' );
+			define( 'MINECRAFT_VALIDATOR_VER', '2.0.1' );
 
 			// Plugin path
 			define( 'MINECRAFT_VALIDATOR_DIR', plugin_dir_path( __FILE__ ) );
